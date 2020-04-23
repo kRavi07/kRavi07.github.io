@@ -202,10 +202,7 @@ body
 	font-size: 1.1em;
 }
 
-.note_
-{
-  margin-left: 25%;
-}
+
 .note_ p
 {
   font-family: courier;
@@ -566,38 +563,38 @@ body
      } 
      .cont_title h1
     {
-	font-size: 1.7em;
-	font-weight: 500;
-	padding-top: 3%;
+    	font-size: 1.7em;
+	    font-weight: 500;
+	    padding-top: 3%;
     }
 
     .cont_img_title
      {
-	padding-top: 12%;
-	text-align: center;
-	color: #51E39B;
-	font-family: 'Arial',sans-serif;
+	   padding-top: 12%;
+	   text-align: center;
+	     color: #51E39B;
+	    font-family: 'Arial',sans-serif;
     }
     .cont_img_title h4
     {
-	font-size: 1em;
+      	font-size: 1em;
     }
     .cont_img
     {
     	padding: 0;
     	margin:0;
-	padding-top: 5%;
+	   padding-top: 5%;
     }
 
    .symp_title 
    {
 	
-	font-size: 1.7em;
-	font-weight: 500;
-	font-family: 'Arial',sans-serif;
+	  font-size: 1.7em;
+	  font-weight: 500;
+	  font-family: 'Arial',sans-serif;
     }
     .sympt_img{
-	padding-top: 4%;
+	    padding-top: 4%;
      } 
      .sympt_img img
      {
@@ -605,15 +602,15 @@ body
      }
           .card-title 
       {
-	font-family: 'Arial' ,sans-serif;
-	font-weight: bold;
-	font-size: 1.5em;
+	     font-family: 'Arial' ,sans-serif;
+	    font-weight: bold;
+	    font-size: 1.5em;
    }
    .card .card-body .card-text 
     {
  
- font-family: 'Arial',sans-serif;
- font-size: 1.2em;
+       font-family: 'Arial',sans-serif;
+     font-size: 1.2em;
    }
 }
 @media only screen and (max-width: 430px) and (min-width:270px )
@@ -672,13 +669,16 @@ body
 	padding-left: 50%;
     }
         .resource_title h1
-{
+    {
   font-style: 'Arial',sans-serif;
   font-weight: 600;
   font-size: 1.5em;
-} 
+   } 
 
-
+  .list-group-item a
+  {
+    font-size: .8em;
+  }
 
 }
 @media only screen and (max-width: 270px) 
