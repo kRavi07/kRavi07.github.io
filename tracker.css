@@ -19,13 +19,13 @@ body
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(Preloader_3.gif) center no-repeat #fff;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(Preloader_3.gif) center no-repeat #fff;
 }
 
 .dark-mode {
@@ -43,8 +43,8 @@ body
 }
 .nav-link
 {
-	font-family: 'Gilroy', sans-serif;
-	font-weight: 600;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
 }
   
 .navbar ul li
@@ -55,26 +55,26 @@ body
 
 .track_title
 {
-	font-family: 'Quattrocento Sans', sans-serif;
-	font-weight: bold;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: bold;
 }
 
 .case_box
 {
-	font-weight: bold;
-	font-family: 'Roboto Mono', monospace !important;
-	font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 1.1em;
 }
 .daily_cnf_case
 {
-	font-size: .5em !important;
+    font-size: .5em !important;
 }
 
 .statewise_title
 {
-	font-family: Courier;
-	font-weight: bold;
-	font-size: 1.5rem;
+    font-family: Courier;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 
@@ -87,36 +87,36 @@ font-weight: bold;
 
 table th
 {
-	font-family: 'Gilroy', sans-serif;
-	font-weight: bold;
-	position: sticky;
-	top: 0;
-	background-color: #fff;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
 }
 
 .state
 {
-	margin-left: 10%;
-	margin-top: 6%;
+    margin-left: 10%;
+    margin-top: 6%;
 }
 
 .stats_title
 {
-	font-size: 1.1em;
-	font-family: courier;
-	font-weight: bold;
+    font-size: 1.1em;
+    font-family: courier;
+    font-weight: bold;
 }
 
 .stats_num
 {
-	font-size: 1.3rem;
-	font-family: 'Gilroy', sans-serif;
-	font-weight: 700;
+    font-size: 1.3rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
 }
 .daily_stats
 {
-	font-size: 1.2em;
-		font-family: 'Gilroy', sans-serif;
+    font-size: 1.2em;
+        font-family: 'Gilroy', sans-serif;
 }
 
 
@@ -145,16 +145,16 @@ table th
 {
   .case_box
 {
-	font-weight: bold;
-	font-family: 'Roboto Mono', monospace !important;
-	font-size: 1em;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 1em;
 
 }
 .navbar li a
 {
  padding-left: 0; 
-	font-weight: 800;
-	font-size: 1.2em;
+    font-weight: 800;
+    font-size: 1.2em;
 
 }
 
@@ -164,16 +164,16 @@ table th
 
 @media only screen and (max-width: 570px)
 {
-	.navbar .nav_img
+    .navbar .nav_img
    {
   height: 2.5rem;
    }
-	.case_box
-	{
+    .case_box
+    {
       margin-top: 1.4em;
-	}
+    }
 
-	
+    
 
 
 
@@ -183,31 +183,31 @@ table th
 }
 .statewise_title
 {
-	margin-left: 5%;
+    margin-left: 5%;
 }
 .state
 {
-	padding-left: 0;
-	
+    padding-left: 0;
+    
 }
 
 .stats_title
 {
-	font-size: 1em;
-	font-family: courier;
-	font-weight: bold;
+    font-size: 1em;
+    font-family: courier;
+    font-weight: bold;
 }
 
 .stats_num
 {
-	font-size: 1.1rem;
-	font-family: 'Gilroy', sans-serif;
-	font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
 }
 .daily_stats
 {
-	font-size: 1.1rem;
-		font-family: 'Arial',sans-serif;
+    font-size: 1.1rem;
+        font-family: 'Arial',sans-serif;
 }
 
 
@@ -221,22 +221,22 @@ table th
 
 thead th 
 {
-	font-size: .9em;
+    font-size: .9em;
 }
  table td
  {
- 	font-size: .8em;
+    font-size: .8em;
 
  }
  .stats_cont
-	{
-	    margin-top: 10%;	
-	}
+    {
+        margin-top: 10%;    
+    }
 
-	.sample_txtd
+    .sample_txtd
    {
-   	padding-left:10em;
-   	padding-top: 3%; 
+    padding-left:10em;
+    padding-top: 3%; 
 
    }
 }
@@ -244,26 +244,26 @@ thead th
 
 @media only screen and (max-width: 485px)
 {
-	.stats_cont
-	{
-	    margin-top: 10%;	
-	}
+    .stats_cont
+    {
+        margin-top: 10%;    
+    }
 }
 
 @media only screen and (min-width: 570px ) and (max-width: 950px ) 
 {
-	.navbar .nav_img
+    .navbar .nav_img
    {
   height: 2.5rem;
    }
    .stats_title
    {
-   	font-size: 1em;
+    font-size: 1em;
    }
    .sample_txtd
    {
-   	padding-left:30%;
-   	padding-top: 5%; 
+    padding-left:30%;
+    padding-top: 5%; 
 
    }
  }  
@@ -284,28 +284,28 @@ thead th
 
 @media only screen and (max-width: 700px)
 {
-	.col-sm-2
-	{
-		width: 20%;
-	}
-	.state
-	{
-		
-	}
-	.stats_cont
-	{
-		margin-left: 5%;
-	}
+    .col-sm-2
+    {
+        width: 20%;
+    }
+    .state
+    {
+        
+    }
+    .stats_cont
+    {
+        margin-left: 5%;
+    }
 }
 @media only screen and (max-width: 500px)
 {
-	  .col-sm-2
+      .col-sm-2
 {
     width: 100%;
 }
   .stats_cont
   {
-  	 margin-left:5%;
+     margin-left:5%;
      width: 30%;
      padding-top: 1em;
      padding-right: 1em;
@@ -313,39 +313,39 @@ thead th
 
     .state
 {
-	
-	margin-left: 18%;
+    
+    margin-left: 18%;
 
 }
 .statewise_title
 {
-	text-align: center;
+    text-align: center;
 
 }
 
 .stats_title
 {
-	font-size: 1em;
-	font-family: courier;
-	font-weight: bold;
+    font-size: 1em;
+    font-family: courier;
+    font-weight: bold;
 }
 
 .stats_num
 {
-	font-size: 1.2rem;
-	font-family: 'Gilroy', sans-serif;
-	font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
 }
 .daily_stats
 {
-	font-size: 1.1rem;
-		font-family: courier;
+    font-size: 1.1rem;
+        font-family: courier;
 }
 
  .sample_txtd
    {
-   	padding-left:5em;
-   	 
+    padding-left:5em;
+     
 
    }
 
@@ -360,7 +360,7 @@ thead th
 }
 .togll
 {
-	margin-left: 20%;
+    margin-left: 20%;
 }
 }
 
@@ -368,45 +368,46 @@ thead th
 {
 .statewise_title
 {
-	font: 1.4rem 'Gilory',sans-serif;
-	font-weight: bold;
+    font: 1.4rem 'Gilory',sans-serif;
+    font-weight: bold;
 }
 .stats_title
 {
-	font-size: .8rem;
-	font-family:'Courier New',sans-serif;
-	font-weight: bold;
+    font-size: .9rem;
+    font-family:'Courier New',sans-serif;
+    font-weight: 500;
 }
 
 .stats_num
 {
-	font-size: 1rem;
-	font-family: 'Gilroy', sans-serif;
-	font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
 }
 .daily_stats
 {
-	font-size: .9rem;
-		font-family: 'Arial',sans-serif;
+    font-size: .9rem;
+        font-family: 'Arial',sans-serif;
 }
 .state
 {
-	padding: 0;
-	margin-left:  3em;
-	
+    padding: 0;
+    margin-left:  1em;
+    
 }
  .stats_cont
  {
- 	padding-left: 2em;
+    padding-left: 2em;
+
  }
 .col-sm-2
 {
-	max-width: 65%;
+    max-width: 65%;
 }
 .sample_txtd
    {
-   	padding-left:5em;
-   	 
+    padding-left:5em;
+     
 
    }
 }
@@ -415,7 +416,7 @@ thead th
 {
   .col-sm-2
   {
-  	width: 60%;
+    width: 60%;
   }
 }
 
