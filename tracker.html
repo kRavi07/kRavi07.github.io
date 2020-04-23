@@ -130,7 +130,7 @@
         		</div>
         	</div>
 
-        	<div class="col-sm-2 stats_cont">
+        	<div class="col-sm-2 stats_cont sample_txtd">
         		<div class="row">
         		<div class="col-sm-12 text-center cyan-text "><h4 class="stats_title">SAMPLE TESTED<sup class="text-danger">*</sup></h4></div>
         		<div class="col-sm-12 text-center cyan-text "><h2 class="stats_num" id="sample_tested"></h2></div>
@@ -243,12 +243,12 @@ console.log(fda);
         console.log(data.statewise[0].lastupdatedtime);
         document.getElementById("last_update").innerHTML=data.statewise[0].lastupdatedtime;
 
-         var totalconfirmed=data.statewise[0].confirmed;
-         var totalrecovered=data.statewise[0].recovered;
-         var totaldeceased= data.statewise[0].deaths;
-         var totalactive=data.statewise[0].active;
-         var sample_tested=data.tested[last_data-1].totalindividualstested;
-         var daily_test= data.tested[last_data-1].samplereportedtoday;
+         var totalconfirmed=parseInt(data.statewise[0].confirmed).toLocaleString();
+         var totalrecovered=parseInt(data.statewise[0].recovered).toLocaleString();
+         var totaldeceased= parseInt(data.statewise[0].deaths).toLocaleString();
+         var totalactive=parseInt(data.statewise[0].active).toLocaleString();
+         var sample_tested=parseInt(data.tested[last_data-1].totalindividualstested).toLocaleString();
+         var daily_test= parseInt(data.tested[last_data-1].samplereportedtoday).toLocaleString();
          
 
         document.getElementById("cnf_case").innerHTML=totalconfirmed;
@@ -315,7 +315,7 @@ const proxyurl = "https://cors-anywhere.herokuapp.com/";
     
      var element = document.body;
    element.classList.toggle("dark-mode");
-   
+
     document.getElementById("togglebtn").classList.toggle("dark-text");
     
   

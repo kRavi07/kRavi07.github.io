@@ -188,7 +188,7 @@ table th
 .state
 {
 	padding-left: 0;
-	margin: 0
+	
 }
 
 .stats_title
@@ -228,6 +228,17 @@ thead th
  	font-size: .8em;
 
  }
+ .stats_cont
+	{
+	    margin-top: 10%;	
+	}
+
+	.sample_txtd
+   {
+   	padding-left:10em;
+   	padding-top: 3%; 
+
+   }
 }
 
 
@@ -245,9 +256,28 @@ thead th
    {
   height: 2.5rem;
    }
+   .stats_title
+   {
+   	font-size: 1em;
+   }
+   .sample_txtd
+   {
+   	padding-left:30%;
+   	padding-top: 5%; 
+
+   }
  }  
 
+@media only screen and (min-width: 700px ) and (max-width: 950px ) 
 
+{
+   .sample_txtd
+   {
+       padding: 0;
+       margin: 0;
+
+   }
+}
 
 
 
@@ -260,28 +290,31 @@ thead th
 	}
 	.state
 	{
-		justify-content: center;
+		
 	}
 	.stats_cont
 	{
-		margin-left: 8%;
+		margin-left: 5%;
 	}
 }
 @media only screen and (max-width: 500px)
 {
 	  .col-sm-2
 {
-    max-width: 60%;
+    width: 100%;
 }
   .stats_cont
   {
-  	padding:0;
+  	 margin-left:5%;
+     width: 30%;
+     padding-top: 1em;
+     padding-right: 1em;
   }
 
     .state
 {
-	padding: 0;
-	margin: 0;
+	
+	margin-left: 18%;
 
 }
 .statewise_title
@@ -309,6 +342,12 @@ thead th
 		font-family: courier;
 }
 
+ .sample_txtd
+   {
+   	padding-left:5em;
+   	 
+
+   }
 
 }
 @media only screen and (max-width: 990px)
@@ -329,13 +368,13 @@ thead th
 {
 .statewise_title
 {
-	font: 1rem 'Gilory',sans-serif;
+	font: 1.4rem 'Gilory',sans-serif;
 	font-weight: bold;
 }
 .stats_title
 {
-	font-size: 1em;
-	font-family:'Arial',sans-serif;
+	font-size: .8rem;
+	font-family:'Courier New',sans-serif;
 	font-weight: bold;
 }
 
@@ -343,14 +382,33 @@ thead th
 {
 	font-size: 1rem;
 	font-family: 'Gilroy', sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 .daily_stats
 {
-	font-size: 1.1rem;
+	font-size: .9rem;
 		font-family: 'Arial',sans-serif;
 }
+.state
+{
+	padding: 0;
+	margin-left:  3em;
+	
+}
+ .stats_cont
+ {
+ 	padding-left: 2em;
+ }
+.col-sm-2
+{
+	max-width: 65%;
+}
+.sample_txtd
+   {
+   	padding-left:5em;
+   	 
 
+   }
 }
 
 @media only screen and (max-width: 325px)
