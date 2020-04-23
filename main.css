@@ -627,9 +627,9 @@ body
      } 
      .main_title
      { 
-	font-size: 1.5em;
-	
-	font-weight: 600;
+	font-size: 1.4em;
+	font-family: courier;
+	font-weight: bold;
     }
     .col-sm-3
     {
