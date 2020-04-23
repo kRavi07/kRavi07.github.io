@@ -44,7 +44,7 @@ body
 .nav-link
 {
 	font-family: 'Gilroy', sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
   
 .navbar ul li
@@ -299,13 +299,13 @@ thead th
 
 .stats_num
 {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	font-family: 'Gilroy', sans-serif;
 	font-weight: 700;
 }
 .daily_stats
 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 		font-family: courier;
 }
 
@@ -334,7 +334,7 @@ thead th
 }
 .stats_title
 {
-	font-size: .8em;
+	font-size: 1.1em;
 	font-family: courier;
 	font-weight: bold;
 }
