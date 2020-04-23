@@ -334,8 +334,8 @@ thead th
 }
 .stats_title
 {
-	font-size: 1.1em;
-	font-family: courier;
+	font-size: 1em;
+	font-family:'Arial',sans-serif;
 	font-weight: bold;
 }
 
@@ -348,7 +348,7 @@ thead th
 .daily_stats
 {
 	font-size: 1.1rem;
-		font-family: courier;
+		font-family: 'Arial',sans-serif;
 }
 
 }
