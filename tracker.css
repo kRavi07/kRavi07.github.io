@@ -32,6 +32,10 @@ body
   background-color: black;
   color: white;
 }
+.dark-text {
+  
+  color: white;
+}
 
 .navbar .nav_img
 {
@@ -111,7 +115,7 @@ table th
 }
 .daily_stats
 {
-	font-size: 1rem;
+	font-size: 1.2em;
 		font-family: 'Gilroy', sans-serif;
 }
 
@@ -202,8 +206,8 @@ table th
 }
 .daily_stats
 {
-	font-size: .7rem;
-		font-family: courier;
+	font-size: 1.1rem;
+		font-family: 'Arial',sans-serif;
 }
 
 
@@ -217,11 +221,12 @@ table th
 
 thead th 
 {
-	font-size: .8em;
+	font-size: .9em;
 }
  table td
  {
- 	font-size: .7em;
+ 	font-size: .8em;
+
  }
 }
 
@@ -300,7 +305,7 @@ thead th
 }
 .daily_stats
 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 		font-family: courier;
 }
 
@@ -342,7 +347,7 @@ thead th
 }
 .daily_stats
 {
-	font-size: .7rem;
+	font-size: 1.1rem;
 		font-family: courier;
 }
 

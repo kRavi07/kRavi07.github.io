@@ -312,25 +312,13 @@ const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
           function toggle()
     {
-    window.alert("ok");
+    
      var element = document.body;
    element.classList.toggle("dark-mode");
-   document.getElementById("death_case").style.color="white";
-   document.getElementById("data").style.color="white";
-   document.getElementById("clrC").style.color="white";
-   document.getElementById("clrC1").style.color="white";
-   document.getElementById("clrC2").style.color="white";
-   document.getElementById("sample_tested").style.color="white";
-   document.getElementById("daily_tested").style.color="white";
-  
-    document.getElementById("clrC5").style.color="white";
-     document.getElementById("daily_death_case").style.color="white";
    
-    document.getElementById("navbarDropdownMenuLink").style.color="white";
-    document.getElementById("daily_death_case").style.color="white";
-    document.getElementById("togglebtn").innerHTML="Return to Original";
-    document.getElementById("togglebtn").style.color="Black";
+    document.getElementById("togglebtn").classList.toggle("dark-text");
     
+  
     
 }
 

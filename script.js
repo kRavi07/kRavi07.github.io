@@ -105,14 +105,14 @@ $.get("https://ipinfo.io", function(response) {
          var totalactive=parseInt(data.statewise[0].active);
 
         //console.log(data.statewise[5].state);
-         document.getElementById("cnf_case").innerHTML=totalconfirmed;
+         document.getElementById("cnf_case").innerHTML=totalconfirmed.toLocaleString();
          document.getElementById("rec_case").innerHTML=totalrecovered.toLocaleString();
          document.getElementById("death_case").innerHTML=totaldeceased.toLocaleString();
          document.getElementById("act_case").innerHTML=totalactive.toLocaleString();
 
-         document.getElementById("daily_cnf_case").innerHTML=parseInt(data.statewise[0].deltaconfirmed).toLocaleString();
-         document.getElementById("daily_rec_case").innerHTML=parseInt(data.statewise[0].deltarecovered).toLocaleString();
-         document.getElementById("daily_death_case").innerHTML=parseInt(data.statewise[0].deltadeaths).toLocaleString();
+         document.getElementById("daily_cnf_case").innerHTML="↑ " +parseInt(data.statewise[0].deltaconfirmed).toLocaleString();
+         document.getElementById("daily_rec_case").innerHTML="↑ " +parseInt(data.statewise[0].deltarecovered).toLocaleString();
+         document.getElementById("daily_death_case").innerHTML="↑ "+parseInt(data.statewise[0].deltadeaths).toLocaleString();
          document.getElementById("daily_act_case").innerHTML=tests.toLocaleString();
               
           

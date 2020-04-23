@@ -95,23 +95,4 @@ console.log(fda);
 
           
 
-          function toggle()
-    {
-
-     var element = document.body;
-   element.classList.toggle("dark-mode");
-   document.getElementById("death_case").style.color="white";
-   document.getElementById("data").style.color="white";
-   document.getElementById("clrC").style.color="white";
-   document.getElementById("clrC1").style.color="white";
-   document.getElementById("clrC2").style.color="white";
-   document.getElementById("clrC3").style.color="white";
-   document.getElementById("clrC4").style.color="white";
-   
-    document.getElementById("navbarDropdownMenuLink").style.color="white";
-    document.getElementById("daily_death_case").style.color="white";
-    document.getElementById("togglebtn").innerHTML="Return to Original";
-    document.getElementById("togglebtn").style.color="Black";
-    
-    
-}
+          
