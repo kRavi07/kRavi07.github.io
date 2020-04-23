@@ -29,10 +29,9 @@ body
 }
 .nav-link
 {
-	font-family: 'Gilroy', sans-serif;
-	font-weight: 600;
-}
-  
+	font-family: 'Helvetica', sans-serif;
+  font-weight: 600;
+}  
 .navbar ul li
 {
    padding-right: 5em;
@@ -42,10 +41,11 @@ body
 {
 	font-family: courier;
 	font-weight: bold;
+
 }
 .stats_title
 {
-	font-family: courier;
+	font-family: 'Helvetica',sans-serif;
 	font-weight: bold;
 
 }
