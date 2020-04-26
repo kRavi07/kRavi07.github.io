@@ -68,8 +68,13 @@
             <li class="nav-item ">
                <a class="nav-link waves-effect waves-light" id="clrC" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" id="clrC1" href="#">Resources</a>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink"               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item waves-effect waves-light" href="essentials.html">Essentials</a>
+                    <a class="dropdown-item waves-effect waves-light" href="#resource">Helfpfull Link</a>
+                  
+                </div>
             </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle waves-effect waves-light"  id="navbarDropdownMenuLink"               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">COVID-19 TRACKER</a>
@@ -83,73 +88,71 @@
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light" id="clrC2" href="#">FAQs</a>
             </li>
-            <li class="nav-item" > 
-                     <a class="btn-floating btn-sm btn-light mt-2" onclick="toggle()" id="togglebtn">Try Dark Mode !</a>
-            </li>         
+                  
            
         </ul>
         
     </div>
 </nav>
+
 <div class="container-fluid">
-	<div class="row mt-5 no-gutters">
-	  <div class="col-sm-12">
-	  	<h2 class="col-sm-12 statewise_title text-center">COVID-19 TRACKER INDIA</h2>
+  <div class="row mt-5 no-gutters">
         <div class="col-sm-12">
-        	<div class="row state">
+          <div class="row state">
 
-        	<div class="col-sm-2 stats_cont ">
-        		<div class="row">
-        		<div class="col-sm-12 text-center text-danger"><h4 class="stats_title">CONFIRMED</h4></div>
-        		<div class="col-sm-12 text-center text-danger"><h2 class="stats_num" id="cnf_case"></h2></div>
-        		<div class="col-sm-12 text-center text-danger"><span class="daily_stats" id="daily_cnf_case"></span></div>
-        		</div>
-        	</div>
+          <div class="col-sm-3 stats_cont ">
+            <div class="row">
+            <div class="col-sm-12 text-center text-danger"><h4 class="stats_title">CONFIRMED</h4></div>
+            <div class="col-sm-12 text-center text-danger"><h2 class="stats_num" id="cnf_case"></h2></div>
+            <div class="col-sm-12 text-center text-danger"><span class="daily_stats" id="daily_cnf_case"></span></div>
+            </div>
+          </div>
 
-        	<div class="col-sm-2 stats_cont ">
-        		<div class="row">
-        		<div class="col-sm-12 text-center text-primary"><h4 class="stats_title">ACTIVE</h4></div>
-        		<div class="col-sm-12 text-center text-primary"><h2 class="stats_num" id="act_case"></h2></div>
-        		<div class="col-sm-12 text-center text-primary"><span class="daily_stats" id="daily_c_case"></span></div>
-        		</div>
-        	</div>
+          <div class="col-sm-3 stats_cont ">
+            <div class="row">
+            <div class="col-sm-12 text-center text-primary"><h4 class="stats_title">ACTIVE</h4></div>
+            <div class="col-sm-12 text-center text-primary"><h2 class="stats_num" id="act_case"></h2></div>
+            <div class="col-sm-12 text-center text-primary"><span class="daily_stats" id="daily_c_case"></span></div>
+            </div>
+          </div>
 
-        	<div class="col-sm-2 stats_cont">
-        		<div class="row">
-        		<div class="col-sm-12 text-center text-success "><h4 class="stats_title">RECOVERED</h4></div>
-        		<div class="col-sm-12 text-center text-success"><h2 class="stats_num" id="rec_case"></h2></div>
-        		<div class="col-sm-12 text-center text-success"><span class="daily_stats" id="daily_rec_case"></span></div>
-        		</div>
-        	</div>
+          <div class="col-sm-3 stats_cont">
+            <div class="row">
+            <div class="col-sm-12 text-center text-success "><h4 class="stats_title">RECOVERED</h4></div>
+            <div class="col-sm-12 text-center text-success"><h2 class="stats_num" id="rec_case"></h2></div>
+            <div class="col-sm-12 text-center text-success"><span class="daily_stats" id="daily_rec_case"></span></div>
+            </div>
+          </div>
 
-        	<div class="col-sm-2 stats_cont">
-        		<div class="row">
-        		<div class="col-sm-12 text-center text-dark "><h4 class="stats_title" id="clrC5">DEATHS</h4></div>
-        		<div class="col-sm-12 text-center text-dark "><h2 class="stats_num" id="death_case"></h2></div>
-        		<div class="col-sm-12 text-center text-dark"><span class="daily_stats" id="daily_death_case"></span></div>
-        		</div>
-        	</div>
+          <div class="col-sm-3 stats_cont">
+            <div class="row">
+            <div class="col-sm-12 text-center text-dark "><h4 class="stats_title" id="clrC5">DEATHS</h4></div>
+            <div class="col-sm-12 text-center text-dark "><h2 class="stats_num" id="death_case"></h2></div>
+            <div class="col-sm-12 text-center text-dark"><span class="daily_stats" id="daily_death_case"></span></div>
+            </div>
+          </div>
 
-        	<div class="col-sm-2 stats_cont sample_txtd">
-        		<div class="row">
-        		<div class="col-sm-12 text-center cyan-text "><h4 class="stats_title">SAMPLE TESTED<sup class="text-danger">*</sup></h4></div>
-        		<div class="col-sm-12 text-center cyan-text "><h2 class="stats_num" id="sample_tested"></h2></div>
-        		<div class="col-sm-12 text-center cyan-text"><span class="daily_stats" id="daily_tested"></span></div>
-        		</div>
-        	</div>
-        	<div>
-	  	</div>
-	  </div> <!--End of Stats row-->
-	 </div> 
-	</div>
-	</div> 
-</div>		
+       
+         </div>
+    </div> <!--End of Stats row-->
+   </div> 
+  
+</div> 
+
+<!--Covid Tracker India Stats End-->
+
+
+
+
  <div class="container">
     <div class="row">
     	
-    	<div class="col-sm-12 float-left mt-5 text-primary ">
+      
+
+    	<div class="col-sm-6 float-left mt-5 text-primary ">
     		<div class="chip   rounded " >
                    <strong id="last_update" class="float-right"></strong>
+                   <strong>Sample Tested :</strong> <span id="sample_tested"></span>
             </div>
     	</div>
    
@@ -247,7 +250,7 @@ console.log(fda);
          var totalrecovered=parseInt(data.statewise[0].recovered).toLocaleString();
          var totaldeceased= parseInt(data.statewise[0].deaths).toLocaleString();
          var totalactive=parseInt(data.statewise[0].active).toLocaleString();
-         var sample_tested=parseInt(data.tested[last_data-1].totalindividualstested).toLocaleString();
+         var sample_tested=parseInt(data.tested[last_data-1].totalsamplestested).toLocaleString();
          var daily_test= parseInt(data.tested[last_data-1].samplereportedtoday).toLocaleString();
          
 
@@ -260,7 +263,7 @@ console.log(fda);
         document.getElementById("daily_cnf_case").innerHTML="↑"+data.statewise[0].deltaconfirmed;
         document.getElementById("daily_rec_case").innerHTML="↑"+data.statewise[0].deltarecovered;
         document.getElementById("daily_death_case").innerHTML="↑"+data.statewise[0].deltadeaths;
-        document.getElementById("daily_tested").innerHTML="↑"+daily_test;
+        //document.getElementById("daily_tested").innerHTML="↑"+daily_test;
         
 
 			});
