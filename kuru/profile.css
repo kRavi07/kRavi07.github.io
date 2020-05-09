@@ -1,0 +1,71 @@
+body
+{
+	background-image: url('img/back.jpg');
+	background-size: cover;
+}
+.logo img
+{
+  height: 8rem;
+}
+
+
+.title
+{
+	font-size: 1.4em;
+	font-family:  'Courier',Monospace;
+	color:#6ad6e7;
+	font-weight: bold;
+
+
+}
+.profile
+{
+	border:1px solid #fff;
+	background-color: #000;
+	opacity: .6;
+
+	
+}
+form label
+{
+	color:#fff;
+	font-size: 1.2em;
+
+}
+input[type="text"]
+{
+	color:#000;
+	font-family: 'Arial', sans-serif;
+	font-weight: bold;
+}
+
+.refer
+{
+	background-color: #86a8ff;
+}
+.refer_span
+{
+	color:#fff;
+	font-size: 1.2em;
+	font-family:  'Arial',sans-serif;
+}
+.edit
+{
+	font-size: 1.1em;
+	font-weight: 500;
+	font-family: 'Helvetica',sans-serif;
+	padding-left:  1.5em;
+	padding-right: 1.5em;
+}
+.share
+{
+	font-size: 1.2em;
+	font-weight: 500;
+
+}
+
+
+
+
+
+
