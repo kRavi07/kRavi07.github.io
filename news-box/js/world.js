@@ -26,7 +26,7 @@ fetch('https://inshortsv2.vercel.app/topic/world/40')
           
           temp +="<h1>"+title+"</h1>";
           temp +="<p>"+desc+"</p>";
-          temp +="<a href="+link+" class='readmore'>Read more</a>";
+          temp +="<a href="+link+" class='readmore' target='blank'>Read more</a>";
           temp +="</article>";
                   }
                   document.getElementById("contn").innerHTML=temp;
