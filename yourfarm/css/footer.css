@@ -1,0 +1,79 @@
+.quick_links li
+{
+list-style-type: none;
+
+}
+.quick_links li a
+{
+	text-decoration: none;
+	color: white;
+}
+.social_links
+{
+	
+}
+.social_links li 
+{
+
+list-style-type: none;
+padding-left: 2em;
+display: inline-block;
+}
+.social_links li i
+{
+	text-decoration: none;
+	color: white;
+    font-size: 1.2em;
+
+
+}
+
+hr{background-color: white;}
+@media only screen and (max-width: 768px ) and (min-width:700px) 
+{
+ .quick_links li
+{
+list-style-type: none;
+
+}
+.social_links li 
+{
+
+list-style-type: none;
+padding-left: 2em;
+display: inline-block;
+}
+.social
+{
+margin-left: 25%;
+}
+}
+
+@media only screen and (max-width: 700px ) and (min-width: 500px)
+{
+.social
+{
+margin-left: 20%;
+}
+}
+
+@media only screen and (max-width: 500px ) and (min-width: 400px)
+{
+.social
+{
+margin-left: 10%;
+}
+
+
+}
+
+@media only screen and (max-width: 325px )
+{
+.social_links li 
+{
+
+list-style-type: none;
+
+display: block;
+}
+}

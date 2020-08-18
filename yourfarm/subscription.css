@@ -1,0 +1,129 @@
+body{
+    background-color: #dff9fb;
+   
+   box-sizing: border-box;
+}
+
+
+.thumbnail{
+    margin-left: 50px;
+     border: 25px solid transparent;
+  padding: 5px;
+  border-image: url(border3.png) 100 round;
+
+}
+
+.grid-wthree-service img{
+border-radius: 50%;
+box-shadow: 1px 1px 7px #a2a2a2;
+}
+.grid-wthree-service {
+    background: rgb(255, 255, 255);
+    padding: 2em 1.5em;
+    border-radius: 50px;
+background: linear-gradient(45deg, #ffffff, #e6e6e6);
+box-shadow:  20px -20px 17px #d9d9d9, 
+             -20px 20px 17px #ffffff;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.grid-wthree-service:hover {
+    background: #ffc107;
+}
+.btn{
+  margin-bottom: 8px;
+}
+
+.veg-info{
+  background-image: image\46.jpg;
+  font-style:Forte; 
+
+}
+.mango{
+  background-image: url('image/bck.jpg');
+  background-size: cover;
+ /* box-shadow: 20px 20px 50px 0 white inset, -20px -20px 50px 0 white inset;*/
+}
+.btn{
+  margin: 20px 0;
+  line-height: 34px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  outline:none !important;
+  width:100%;
+}
+.heading{
+  font-family: 'Source Code Pro', monospace;
+}
+span{
+  font-family: Bahnschrift;
+}
+.mt-2{
+   font-family: Bahnschrift;
+}
+.quick_links li
+{
+list-style-type: none;
+
+}
+.quick_links li a
+{
+  text-decoration: none;
+  color: white;
+}
+.social_links
+{
+  
+}
+.social_links li
+{
+
+list-style-type: none;
+padding-right: 2em;
+display: inline-block;
+}
+.social_links li i
+{
+  text-decoration: none;
+  color: white;
+    font-size: 1.2em;
+
+}
+
+
+
+.subBox
+{ border: 1px dashed black;
+  padding: 10px;
+
+  box-sizing: border-box;
+  box-shadow: 10px 10px 10px #000;
+  font-family: 'Source Code Pro', monospace;
+
+
+
+
+}
+.subBox:hover
+{
+  -ms-transform: scale(1.1); 
+  -webkit-transform: scale(1.1); 
+  transform: scale(1.1) ;
+  transform-style: preserve-3d;
+  z-index: 2;
+ border-radius: 50px;
+background: linear-gradient(45deg, #ff8944, #e6733a);
+box-shadow:  20px -20px 22px #d96d36, 
+             -20px 20px 22px #ff934a;
+  transition-duration: 1s;
+}
+
+
+#box
+{
+  color: red;
+  }

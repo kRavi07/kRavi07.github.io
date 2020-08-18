@@ -1,0 +1,65 @@
+.grid-two
+{
+
+}
+
+.service-row
+{
+	margin:0;
+	padding:0;
+}
+
+.grid-two img{
+ 
+  
+
+}
+
+.grid-two {
+    background: rgb(255, 255, 255);
+    
+    border-radius: 10px;
+
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.grid-two:hover {
+   
+}
+.rent-img
+{
+	margin-left: -5%;
+}
+
+.grid-two-title
+{
+	position: absolute;
+	bottom: 90%;
+	left: 40%;
+	z-index: 10;
+}
+.rent-img
+{
+
+}
+
+
+
+
+.grid-title
+{
+ 
+}
+
+
+@media only screen and (min-width: 570px )
+{
+	.grid-two
+	{
+		  
+		margin-left: 5%;
+	}
+}

@@ -1,0 +1,108 @@
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.vertical-tab{
+    font-family: 'Nunito', sans-serif;
+    display: table;
+}
+.vertical-tab .nav-tabs{
+    display: table-cell;
+    width: 28%;
+    min-width: 28%;
+    vertical-align: top;
+    border: none;
+}
+.vertical-tab .nav-tabs li{
+   float: none;
+   vertical-align: top;
+}
+.vertical-tab .nav-tabs li a{
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.vertical-tab .nav-tabs li:last-child a{ margin-bottom: 0; }
+.vertical-tab .nav-tabs li a:hover,
+.vertical-tab .nav-tabs li.active a,
+.vertical-tab .nav-tabs li.active a:hover{
+    color: #222;
+    background-color: #fff;
+    border: none;
+}
+.vertical-tab .nav-tabs li a:before,
+.vertical-tab .nav-tabs li a:after{
+    content: "";
+    background-color: #d1d1d1;
+    width: 11px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.vertical-tab .nav-tabs li a:hover:before,
+.vertical-tab .nav-tabs li.active a:before,
+.vertical-tab .nav-tabs li.active a:hover:before{
+    width: 50%;
+    opacity: 0;
+}
+.vertical-tab .nav-tabs li a:after{
+    background-color: #6CBF1C;
+    width: 50%;
+    opacity: 0;
+}
+.vertical-tab .nav-tabs li a:hover:after,
+.vertical-tab .nav-tabs li.active a:after,
+.vertical-tab .nav-tabs li.active a:hover:after{
+    width: 11px;
+    opacity: 1;
+}
+.vertical-tab .tab-content{
+    color: #222;
+    background: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    padding: 20px 20px 10px;
+    margin-top: 10px;
+    display: table-cell;
+    position: relative;
+}
+.vertical-tab .tab-content h3{
+    color: #222;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+@media only screen and (max-width: 479px){
+    .vertical-tab .nav-tabs{
+        width: 100%;
+        display: block;
+        border: none;
+    }
+    .vertical-tab .tab-content{
+        padding: 25px 20px;
+        margin-top: 0;
+        display: block;
+    }
+    .vertical-tab .tab-content h3{ font-size: 18px; }
+}
+JavaScript (Vertical Tab depend on jQuery and Bootstrap.)
+1
+2
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+License Terms

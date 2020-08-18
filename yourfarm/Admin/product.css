@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(96, 194, 201) !important; 
+}
+
+
+nav a{
+color:white;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.input_box input[type="text"]
+{
+    border:1px solid #d4b3b2;
+    border-radius: .2em;
+   margin-top:.5em;  
+
+}
+
+.input_box input[type="file"]
+{
+	margin-top: .5em;
+}
+
+.input_box select
+{
+	margin-top: .5em;
+}
+.input_box span
+{
+	margin-top: .5em;
+}
+
+.input_box img
+{
+	margin: .5em;
+}
