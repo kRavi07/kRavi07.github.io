@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1" >
+  
+
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+	</script> 
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="pb.css">
+	<script type="text/javascript" src="pb.js"></script>
+   <style type="text/css">
+   	
+   </style>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+	
+		<div class="col-sm-8 mx-auto p-5 ">
+			<div class="input-group">
+			<input type="text" class=  "form-control" name="" id="city">
+			 <div class="input-group-append">
+             <button type="button" class="btn btn-dark btn-sm" onclick="getW()">Get Weather</button>
+            </div>
+            </div>
+            
+         
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 mx-auto">
+			<h2 class="text-center" id="city_name">Country_name</h2>
+			<h6 class="text-center" id="last_up"></h6>
+		</div>
+	</div>
+	<div class="row text-dark">	
+		<div class="col-6 d-flex justify-content-end "><h1 id="temp_c" class="pt-2">23 *C</h1> <h1 class="pt-2">/</h1>
+			<h1 class="pt-2" id="temp_f">Farn</h1></div>
+		<div class="col-6 "><img id="icon" src='' class="img-fluid" style=" height=100px; color:black " ></div>
+		<div class="col-12  text-center"><h2 id="cond">Sunny</h2></div>
+		<div class="col-6  d-flex justify-content-end"><h4>Feels Like &nbsp</h4> <h4 id="fls">1</h4></div>
+		<div class="col-6 "><display style="font-size: 22px;font-weight:500">Humidity</display> <display id="hum" style="font-size: 22px; font-weight: 500" >12</display> </div>
+		<div class="col-2 d-flex justify-content-end">
+			<img src="https://img.icons8.com/bubbles/100/000000/wind-turbine.png" class="img-fluid " />
+		</div>
+		<div class="col-3 d-flex justify-content-start pt-4 mt-2">
+			<h6 id="w_speed"></h6>
+			
+		</div>
+		<div class="col-3 d-flex justify-content-start pt-4 mt-2">
+			<h6 id="w_dir">123</h6>
+		</div>
+	
+	</div>		
+	
+</div>  
+
+
+
+
+<script type="text/javascript">
+ 
+var city="";
+ /*$.get("https://ipinfo.io", function(response) {
+  console.log(response.ip, response.country);
+  console.log(response.ity);
+  city=response.city;},"jsonp")
+ ;*/
+ fetch("https://ipinfo.io/?token=24a9c83ea98f18")
+ .then(res=>res.json())
+ .then(function(data)
+{
+
+
+console.log(data);
+
+city=data.city;
+console.log(city);
+
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+	fetch( proxyurl+"http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q="+city+"")
+	.then(res=>res.json())
+	.then(function(data)
+	{
+        //document.writeln(data.location);
+        //console.log(data.current.condition);
+		console.log(data.current);
+		document.getElementById("last_up").innerHTML="Last Updted On &nbsp"+data.current.last_updated;
+		document.getElementById("city_name").innerHTML=city;
+		document.getElementById("temp_c").innerHTML=data.current.temp_c+"&degC";
+		document.getElementById("temp_f").innerHTML=data.current.temp_f+"&degF";
+		document.getElementById("cond").innerHTML=data.current.condition.text;
+		document.getElementById("fls").innerHTML=data.current.feelslike_c+"&degC";
+		document.getElementById("hum").innerHTML=data.current.humidity;
+		document.getElementById("icon").src="https:"+data.current.condition.icon;
+		document.getElementById("w_speed").innerHTML="Wind Speed : "+data.current.wind_kph;
+		document.getElementById("w_dir").innerHTML="Wind Direction : "+data.current.wind_dir
+		console.log(data.current.condition.icon);
+	});
+
+
+}
+ 	);
+
+
+
+
+
+	function getW()
+	{
+		var txt=document.getElementById("city").value;
+        console.log(txt);
+	const proxyurl = "https://cors-anywhere.herokuapp.com/";
+	fetch( proxyurl+"http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q="+txt+"")
+	.then(res=>res.json())
+	.then(function(data)
+	{
+        //document.writeln(data.location);
+        //console.log(data.current.condition);
+		console.log(data.current);
+		document.getElementById("city_name").innerHTML=txt;
+		
+
+		document.getElementById("temp_c").innerHTML=data.current.temp_c+"&degC";
+		document.getElementById("temp_f").innerHTML=data.current.temp_f+"&degF";
+		document.getElementById("cond").innerHTML=data.current.condition.text;
+		document.getElementById("fls").innerHTML=data.current.feelslike_c+"&degC";
+		document.getElementById("hum").innerHTML=data.current.humidity;
+		document.getElementById("icon").src="https:"+data.current.condition.icon;
+		
+	});
+	//document.writeln(data);
+
+}
+/*const proxyurl = "https://cors-anywhere.herokuapp.com/";
+fetch(proxyurl+"http://api.weatherapi.com/v1/sports.json?key=bf3e1839374e457090563134202211&q=cricket")
+.then(res=>res.json())
+.then(function(data)
+{
+	console.log(data);
+});*/
+</script>
+</body>
+</html>
