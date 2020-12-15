@@ -116,8 +116,8 @@
 <script type="text/javascript">
 var city = "";
 
-//const proxyurl = "https://cors-anywhere.herokuapp.com/";
-fetch("http://ipwhois.app/json/")
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+fetch(proxyurl+"http://ipwhois.app/json/")
 	.then(res => res.json())
 	.then(function(data) {
 
@@ -225,7 +225,7 @@ function getW() {
 	//Forcast for searched cities
 
 
-	fetch("http://api.positionstack.com/v1/forward?access_key=d539c500cc6582a9d334c09714af1ecd&query=" + txt)
+	fetch(proxyurl+"http://api.positionstack.com/v1/forward?access_key=d539c500cc6582a9d334c09714af1ecd&query=" + txt)
 		.then(res => res.json())
 		.then(function(data) {
 			console.log(data);
