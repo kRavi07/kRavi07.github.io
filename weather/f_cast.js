@@ -10,7 +10,7 @@ fetch("http://ipwhois.app/json/",{
   var lat=data.latitude;
   var lon=data.longitude;
   console.log(lat+" "+lon);
-  fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&exclude=hourly,minutely&appid=00169fed074b498a38c648db4138195c")
+  fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&exclude=hourly,minutely&appid="+my_open_w_api)
 .then(res =>res.json())
 .then(function(data)
 	{

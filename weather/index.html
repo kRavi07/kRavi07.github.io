@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="config.js"></script>
 	<script src="f_cast.js"></script>
 	
 
@@ -141,6 +142,10 @@
 </div>
 
 <script type="text/javascript">
+	const my_weather_api=config.weather_api;
+	const my_waqi_api=config.waqi_api;
+	const my_pos_api=config.pos_api;
+	const my_open_w_api=config.open_w_api;
 var city = "";
 
 
@@ -160,7 +165,7 @@ fetch("https://ipwhois.app/json/")
 		console.log(city);
 
 		const proxyurl ="https://cors-anywhere.herokuapp.com/";
-		fetch(proxyurl+"http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q=" + city + "")
+		fetch(proxyurl+"http://api.weatherapi.com/v1/current.json?key="+my_weather_api+"&q=" + city + "")
 			.then(res => res.json())
 			.then(function(data) {
 				
@@ -183,7 +188,7 @@ fetch("https://ipwhois.app/json/")
 
 
 		//AQI api
-		fetch("https://api.waqi.info/feed/geo:" + lat + ";" + lng + "/?token=76b8a4733c346d6d697a0802a0d151d51f048fc0")
+		fetch("https://api.waqi.info/feed/geo:" + lat + ";" + lng + "/?token="+my_waqi_api+"")
 			.then(res => res.json())
 			.then(function(data) {
 				console.log(data);
@@ -227,7 +232,7 @@ function getW() {
 	var txt = document.getElementById("city").value;
 	console.log(txt);
 	const proxyurl = "https://cors-anywhere.herokuapp.com/";
-	fetch(proxyurl + "http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q="+ txt+"")
+	fetch(proxyurl + "http://api.weatherapi.com/v1/current.json?key="+my_weather_api+"&q="+ txt+"")
 		.then(res => res.json())
 		.then(function(data) {
 			//document.writeln(data.location);
@@ -255,7 +260,7 @@ function getW() {
 	//Forcast for searched cities
 
 
-	fetch(proxyurl+"http://api.positionstack.com/v1/forward?access_key=d539c500cc6582a9d334c09714af1ecd&query=" + txt)
+	fetch(proxyurl+"http://api.positionstack.com/v1/forward?access_key="+my_pos_api+"&query=" + txt)
 		.then(res => res.json())
 		.then(function(data) {
 			console.log(data);
@@ -265,7 +270,7 @@ function getW() {
 
 
 			//Searched city
-			fetch("https://api.waqi.info/feed/geo:" + lat + ";" + lon + "/?token=76b8a4733c346d6d697a0802a0d151d51f048fc0")
+			fetch("https://api.waqi.info/feed/geo:" + lat + ";" + lon + "/?token="+my_waqi_api+"")
 				.then(res => res.json())
 				.then(function(data) {
 					//console.log(data);
@@ -353,7 +358,7 @@ function getW() {
 
 
 
-			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid=00169fed074b498a38c648db4138195c")
+			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid="+open_w_api+"")
 				.then(res => res.json())
 				.then(function(data) {
 					//console.log(data);
