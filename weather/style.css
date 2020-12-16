@@ -1,0 +1,69 @@
+      body
+   	{
+      background-color: #d1f1fd;
+   	}
+   	#temp_c,#temp_f
+   	{
+   	  font-size: 2em;	
+   	  font-weight: 500;
+   	}
+      .vect
+      {
+         height: 50em;
+      }
+   	.card
+   	{
+   	background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6.0px );
+-webkit-backdrop-filter: blur( 6.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+   	}
+
+.cast_card>.card
+{
+
+ background: rgba( 242, 221, 78, 0.50 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3.5px );
+-webkit-backdrop-filter: blur( 3.5px );
+border-radius: 10px;  
+}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+   background: url(loader.svg) center no-repeat #fff;
+}
+
+      @media only screen and (max-width:700px)
+      {
+         
+         .vect
+         {
+            display: none;
+
+         }
+         .col-8
+         {
+            max-width: 100%;
+            flex: 0 0 100%;
+         }
+         .cast_card>.card
+         {
+            width: 100%;
+            
+         }
+         .scale>.col-6
+         {
+            max-width: 100%;
+            flex: 0 0 100%;
+         }
+
+      }

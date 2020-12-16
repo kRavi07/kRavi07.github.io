@@ -1,0 +1,414 @@
+
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1" >
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+     
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+	</script> 
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="f_cast.js"></script>
+	
+
+    <script type="text/javascript">
+    	$(window).on('load',function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
+    </script>
+   
+</head>
+<body>
+
+	<div class="se-pre-con"></div>
+
+
+<div class="container-fluid">
+   <div class="row ">
+      <div class="col-8 main">
+         <div class="row">
+            <div class="col-sm-8 mx-auto p-5 ">
+               <div class="input-group">
+                  <input type="text" class=  "form-control" name="" id="city">
+                  <div class="input-group-append">
+                     <button type="button" class="btn btn-dark btn-sm" onclick="getW()">Get Weather</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 mx-auto">
+               <h2 class="text-center" id="city_name"></h2>
+               <h6 class="text-center" id="last_up"></h6>
+            </div>
+         </div>
+         <div class="row text-dark">
+            <div class="col-6 d-flex justify-content-end  ">
+               <p id="temp_c" class="pt-2"></p>
+            </div>
+            <div class="col-4 d-flex justify-content-start"><img id="icon" src='' class="img-fluid" style=" height=200px; color:black ;" ></div>
+            <div class="col-12  text-center">
+               <h2 id="cond"></h2>
+            </div>
+            <div class="col-6  d-flex justify-content-end">
+               <h5 id="fls"></h5>
+            </div>
+            <div class="col-6 ">
+               <h5 id="hum"></h5>
+            </div>
+         </div>
+         <div class="card-deck">
+            <div class="card ">
+               <div class="card-header">
+                  <h4 class="col-8">Weather</h4>
+               </div>
+               <div class="card-body">
+                  <h6 id="w_speed"></h6>
+                  <h6 id="w_dir"></h6>
+                  <h6 id="UV"></h6>
+                  <h6 id="prec"></h6>
+                  <h6 id="pressure_in"></h6>
+               </div>
+            </div>
+            <div class="card aqi">
+               <div class="card-header " >
+                  <h4 id="aqi"></h4>
+               </div>
+               <div class="card-body iaqi">
+                  <h6 id="pm25"></h6>
+                  <h6 id="pm10"></h6>
+                  <h6 id="o3"></h6>
+                  <h6 id="so2"></h6>
+                  <h6 id="no2"></h6>
+               </div>
+              
+            </div>
+         </div>
+      </div>
+      <div class="col-4 vect">
+         <img src="female.svg" style="height: 80%">
+      </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row mt-5">
+      <div class="col-sm-12">
+         <h3 class="text-center">Weather Forecast</h3>
+      </div>
+      <div class="col-sm-12 mt-3">
+         <div class="card-deck cast_card pb-5"id="root">
+         </div>
+      </div>
+   </div>
+
+   <div class="row">
+   	<div class="col-6 scale">
+   		<div class="card ">
+   			<div class="card-header"><h6>Air Quality Scale</h6></div>
+   			<div class="card-body">
+   				 
+               	<div class="row">
+               		
+               		<div class="col-6"><span style="background-color: #9afeaf;">0-50:Good</span></div>
+               		<div class="col-6"><span style="background-color:#ffff85; ">50-100:Moderate</span></div>
+               		<div class="col-6"><span style="background-color:#ff9933; ">100-150:Unhealthy for Sesitive People</span></div>
+
+               		<div class="col-6"><span style="background-color: #CC0033; color: #fff;">150-200:Unhealthy</span></div>
+                	<div class="col-6"><span style="background-color: #660099;color:#fff;">200-300:Very Unhealthy</span></div>
+               		<div class="col-6"><span style="background-color:#7E0023;color: #fff;">300+:Hazardous</span></div>		
+               	</div>
+               
+   			</div>
+
+   		</div>
+   	</div>
+   </div>
+
+
+   <div class="row mt-5">
+   	<h5 class="col text-center ">
+   		Made By Ravi Kant Kumar
+   	</h5>
+   </div>
+</div>
+
+<script type="text/javascript">
+var city = "";
+
+
+
+fetch("https://ipwhois.app/json/")
+	      .then(function(res)
+               {
+                return (res.json());
+               }
+                )
+.then(function(data){
+		console.log(data);
+
+		city = data.city;
+		var lat = data.latitude;
+		var lng = data.longitude;
+		console.log(city);
+
+		const proxyurl ="https://cors-anywhere.herokuapp.com/";
+		fetch(proxyurl+"http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q=" + city + "")
+			.then(res => res.json())
+			.then(function(data) {
+				
+				console.log(data.current);
+				document.getElementById("last_up").innerHTML = "Last Updted On &nbsp" + data.current.last_updated;
+				document.getElementById("city_name").innerHTML = city;
+				document.getElementById("temp_c").innerHTML = data.current.temp_c + " &degC  &nbsp";
+				//document.getElementById("temp_f").innerHTML=data.current.temp_f+" &degF ";
+				document.getElementById("cond").innerHTML = data.current.condition.text;
+				document.getElementById("fls").innerHTML = "Feels Like " + data.current.feelslike_c + "&degC";
+				document.getElementById("hum").innerHTML = "Humidity " + data.current.humidity + "%";
+				document.getElementById("icon").src = "https:" + data.current.condition.icon;
+				document.getElementById("w_speed").innerHTML = "Wind Speed : " + data.current.wind_kph + "kmph";
+				document.getElementById("w_dir").innerHTML = "Wind Direction : " + data.current.wind_dir
+				document.getElementById("prec").innerHTML = "Precipitation : " + data.current.precip_mm + "mm";
+				document.getElementById("UV").innerHTML = "UV Index : " + data.current.uv;
+				document.getElementById("pressure_in").innerHTML = "Pressure : " + data.current.pressure_in + " in";
+			});
+
+
+
+		//AQI api
+		fetch("https://api.waqi.info/feed/geo:" + lat + ";" + lng + "/?token=76b8a4733c346d6d697a0802a0d151d51f048fc0")
+			.then(res => res.json())
+			.then(function(data) {
+				console.log(data);
+				var aqi = data.data.aqi;
+				document.getElementById("aqi").innerHTML = "AQI : " + data.data.aqi + "<sup>*</sup>";
+				document.getElementById("pm10").innerHTML = "PM 10 : " + data.data.forecast.daily.pm10[2].avg + " &#181g/m<sup>3</sup>";
+				document.getElementById("pm25").innerHTML = "PM25 : " + data.data.forecast.daily.pm25[2].avg + " &#181g/m<sup>3</sup>";
+				document.getElementById("so2").innerHTML = "SO<sub>2</sub> : " + data.data.iaqi.so2.v + " &#181g/m<sup>3</sup>";
+				document.getElementById("no2").innerHTML = "NO<sub>2</sub> : " + data.data.iaqi.no2.v + " &#181g/m<sup>3</sup>";
+				document.getElementById("o3").innerHTML = "O<sub>3</sub> : " + data.data.forecast.daily.o3[2].avg + " &#181g/m<sup>3</sup>";
+				var aqi = parseInt(data.data.aqi);
+				if (aqi > 0 && aqi < 50) {
+					document.querySelector(".aqi").style.backgroundColor = "#9afeaf";
+				} else if (aqi > 50 && aqi < 100) {
+					document.querySelector(".aqi").style.backgroundColor = "#ffff85";
+				} else if (aqi > 100 && aqi < 150) {
+					document.querySelector(".aqi").style.backgroundColor = "#ff9933";
+				} else if (aqi > 150 && aqi < 200) {
+					document.querySelector(".aqi").style.backgroundColor = "#CC0033";
+
+					document.querySelector(".aqi").style.color = "#fff";
+				} else if (aqi > 200 && aqi < 300) {
+					document.querySelector(".aqi").style.backgroundColor = "#660099";
+					document.querySelector(".aqi").style.color = "#fff";
+				} else {
+					document.querySelector(".aqi").style.backgroundColor = "#7E0023";
+					document.querySelector(".aqi").style.color = "#fff";
+				}
+
+
+			});
+
+
+	});
+
+
+
+
+
+function getW() {
+	var txt = document.getElementById("city").value;
+	console.log(txt);
+	const proxyurl = "https://cors-anywhere.herokuapp.com/";
+	fetch(proxyurl + "http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q="+ txt+"")
+		.then(res => res.json())
+		.then(function(data) {
+			//document.writeln(data.location);
+			//console.log(data.current.condition);
+			//console.log(data.current);
+			document.getElementById("city_name").innerHTML = txt;
+
+			document.getElementById("last_up").innerHTML = "Last Updted On &nbsp" + data.current.last_updated;
+			document.getElementById("temp_c").innerHTML = data.current.temp_c + " &degC ";
+
+			document.getElementById("cond").innerHTML = data.current.condition.text;
+			document.getElementById("fls").innerHTML = data.current.feelslike_c + "&degC";
+			document.getElementById("hum").innerHTML = data.current.humidity + "%";
+			document.getElementById("icon").src = "https:" + data.current.condition.icon;
+			document.getElementById("w_speed").innerHTML = "Wind Speed : " + data.current.wind_kph + "kmph";
+			document.getElementById("w_dir").innerHTML = "Wind Direction : " + data.current.wind_dir
+			document.getElementById("prec").innerHTML = "Precipitation:" + data.current.precip_mm + "mm";
+			document.getElementById("UV"), innerHTML = "UV Index :" + data.current.uv;
+
+
+		});
+
+
+
+	//Forcast for searched cities
+
+
+	fetch(proxyurl+"http://api.positionstack.com/v1/forward?access_key=d539c500cc6582a9d334c09714af1ecd&query=" + txt)
+		.then(res => res.json())
+		.then(function(data) {
+			console.log(data);
+			var lat = data.data[0].latitude;
+			var lon = data.data[0].longitude;
+			console.log(lat + " " + lon);
+
+
+			//Searched city
+			fetch("https://api.waqi.info/feed/geo:" + lat + ";" + lon + "/?token=76b8a4733c346d6d697a0802a0d151d51f048fc0")
+				.then(res => res.json())
+				.then(function(data) {
+					//console.log(data);
+
+					if (data.status == "ok") {
+						var aqi = data.data.aqi;
+						var pm10 = data.data.forecast.daily.pm10[2].avg;
+						var pm25 = data.data.forecast.daily.pm25[2].avg;
+						var so2="";
+						if(typeof(data.data.iaqi.so2)!=='undefined')
+						{
+							 so2=data.data.iaqi.so2.v;
+						}
+						else
+						{
+							so2="--";
+						}
+						var no2 ="";
+					   if(typeof(data.data.iaqi.so2)!=='undefined')
+						{
+							var no2 = data.data.iaqi.no2.v;
+						}else{no2="--";}
+
+						
+						var o3 = data.data.forecast.daily.o3[2].avg;
+
+						if (typeof(aqi)!=='undefined') {
+							document.getElementById("aqi").innerHTML = "AQI : " + aqi+" *";
+						} else {
+							document.getElementById("aqi").innerHTML = "AQI : NA";
+						}
+						if (typeof(pm10)!=='undefined') {
+							document.getElementById("pm10").innerHTML = "PM10 : " + pm10 + " &#181g/m<sup>3</sup>";
+						} else {
+							document.getElementById("pm10").innerHTML = "PM10 : NA";
+						}
+						if (typeof(pm25)!=='undefined') {
+							document.getElementById("pm25").innerHTML = "PM25 : " + pm25 + " &#181g/m<sup>3</sup>";
+						} else {
+							document.getElementById("pm25").innerHTML = "PM25 : NA";
+						}
+						if(typeof(so2)!=='undefined')
+						{
+						   document.getElementById("so2").innerHTML="SO<sub>2</sub> : "+so2+" &#181g/m<sup>3</sup>";   	
+						}
+						else{document.getElementById("so2").innerHTML="SO<sub>2</sub> : NA";}
+						if (typeof(no2)!=='undefined') {
+							document.getElementById("no2").innerHTML = "NO<sub>2</sub> : " + no2 + " &#181g/m<sup>3</sup>";
+						} else {
+							document.getElementById("no2").innerHTML = "NO<sub>2</sub> : NA";
+						}
+						if (typeof(o3)!=='undefined') {
+							document.getElementById("o3").innerHTML = "O<sub>3</sub> : " + o3 + " &#181g/m<sup>3</sup>";
+						} else {
+							document.getElementById("o3").innerHTML = "O<sub>3</sub> : NA";
+						}
+
+
+
+
+
+
+					} else {
+						alert("not found");
+					}
+					var aqi = parseInt(data.data.aqi);
+				if (aqi > 0 && aqi < 50) {
+					document.querySelector(".aqi").style.backgroundColor = "#9afeaf";
+				} else if (aqi > 50 && aqi < 100) {
+					document.querySelector(".aqi").style.backgroundColor = "#ffff85";
+				} else if (aqi > 100 && aqi < 150) {
+					document.querySelector(".aqi").style.backgroundColor = "#ff9933";
+				} else if (aqi > 150 && aqi < 200) {
+					document.querySelector(".aqi").style.backgroundColor = "#CC0033";
+
+					document.querySelector(".aqi").style.color = "#fff";
+				} else if (aqi > 200 && aqi < 300) {
+					document.querySelector(".aqi").style.backgroundColor = "#660099";
+					document.querySelector(".aqi").style.color = "#fff";
+				} else {
+					document.querySelector(".aqi").style.backgroundColor = "#7E0023";
+					document.querySelector(".aqi").style.color = "#fff";
+				}
+				});
+
+
+
+			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid=00169fed074b498a38c648db4138195c")
+				.then(res => res.json())
+				.then(function(data) {
+					//console.log(data);
+					//console.log(data.daily[1].dt);
+
+
+					//console.log(data.daily.length);
+					var img = "";
+
+					console.log(data.daily[1].weather[0].icon);
+					temp = "";
+					for (var i = 1; i < 5; i++) {
+						if (data.daily[i].weather[0].icon == "01d") {
+							img = "animated/day.svg";
+						} else {
+							img = "animated/night.svg";
+						}
+
+						function timeConverter(UNIX_timestamp) {
+							var a = new Date(UNIX_timestamp * 1000);
+							var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+							var year = a.getFullYear();
+							var month = months[a.getMonth()];
+							var date = a.getDate();
+
+							var time = date + ' ' + month;
+							return time;
+						}
+						var dat = timeConverter(data.daily[i].dt);
+
+
+
+
+						var cond = data.daily[i].weather[0].main;
+						var temp_max = data.daily[i].temp.max;
+						var hum = data.daily[i].humidity;
+						var temp_min = data.daily[i].temp.min;
+						temp += "<div class=card c_card>";
+						temp += "<div class='card-body'>";
+						temp += "<h5 class='text-center' >" + dat + "</h5>"
+						temp += "<p class='text-center'><img src=" + img + "></p>";
+						temp += "<h5 class='text-center'>" + cond + "</h5>";
+						temp += "<h6 class='text-center'>Humidity : " + hum + "</h6>"
+						temp += "<h6 class='text-center'>Min/Max(&degC):  " + temp_min + "/" + temp_max + "</h6>";
+						temp += "</div>";
+						temp += "</div>";
+					}
+					document.getElementById("root").innerHTML = temp;
+
+				});
+
+		});
+
+}
+</script>
+
+</body>
+</html>
