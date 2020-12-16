@@ -1,5 +1,9 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-fetch("http://ipwhois.app/json/" )
+fetch("http://ipwhois.app/json/",{
+	headers:{
+		"Content-Security-Policy": "upgrade-insecure-requests"
+	}
+} )
 .then(res=>res.json())
 .then(function(data){
 	console.log(data)
