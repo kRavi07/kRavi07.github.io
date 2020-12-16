@@ -359,7 +359,7 @@ function getW() {
 
 
 
-			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid="+open_w_api+"")
+			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid="+my_open_w_api+"")
 				.then(res => res.json())
 				.then(function(data) {
 					//console.log(data);
