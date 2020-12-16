@@ -1,0 +1,6 @@
+var config= {
+ weather_api:"bf3e1839374e457090563134202211",
+ waqi_api:"76b8a4733c346d6d697a0802a0d151d51f048fc0",
+ pos_api:"d539c500cc6582a9d334c09714af1ecd",
+ open_w_api:"00169fed074b498a38c648db4138195c",
+}
