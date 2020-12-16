@@ -46,20 +46,20 @@
          </div>
          <div class="row">
             <div class="col-sm-12 mx-auto">
-               <h2 class="text-center" id="city_name">Country_name</h2>
+               <h2 class="text-center" id="city_name"></h2>
                <h6 class="text-center" id="last_up"></h6>
             </div>
          </div>
          <div class="row text-dark">
             <div class="col-6 d-flex justify-content-end  ">
-               <p id="temp_c" class="pt-2">23 *C</p>
+               <p id="temp_c" class="pt-2"></p>
             </div>
             <div class="col-4 d-flex justify-content-start"><img id="icon" src='' class="img-fluid" style=" height=200px; color:black ;" ></div>
             <div class="col-12  text-center">
-               <h2 id="cond">Sunny</h2>
+               <h2 id="cond"></h2>
             </div>
             <div class="col-6  d-flex justify-content-end">
-               <h5 id="fls">1</h5>
+               <h5 id="fls"></h5>
             </div>
             <div class="col-6 ">
                <h5 id="hum"></h5>
@@ -72,9 +72,9 @@
                </div>
                <div class="card-body">
                   <h6 id="w_speed"></h6>
-                  <h6 id="w_dir">123</h6>
-                  <h6 id="UV">Uv</h6>
-                  <h6 id="prec">precipitation</h6>
+                  <h6 id="w_dir"></h6>
+                  <h6 id="UV"></h6>
+                  <h6 id="prec"></h6>
                   <h6 id="pressure_in"></h6>
                </div>
             </div>
@@ -89,6 +89,7 @@
                   <h6 id="so2"></h6>
                   <h6 id="no2"></h6>
                </div>
+              
             </div>
          </div>
       </div>
@@ -107,6 +108,31 @@
          </div>
       </div>
    </div>
+
+   <div class="row">
+   	<div class="col-6">
+   		<div class="card">
+   			<div class="card-header"><h6>Air Quality Scale</h6></div>
+   			<div class="card-body">
+   				 
+               	<div class="row">
+               		
+               		<div class="col-6"><span style="background-color: #9afeaf;">0-50:Good</span></div>
+               		<div class="col-6"><span style="background-color:#ffff85; ">50-100:Moderate</span></div>
+               		<div class="col-6"><span style="background-color:#ff9933; ">100-150:Unhealthy for Sesitive People</span></div>
+
+               		<div class="col-6"><span style="background-color: #CC0033; color: #fff;">150-200:Unhealthy</span></div>
+                	<div class="col-6"><span style="background-color: #660099;color:#fff;">200-300:Very Unhealthy</span></div>
+               		<div class="col-6"><span style="background-color:#7E0023;color: #fff;">300+:Hazardous</span></div>		
+               	</div>
+               
+   			</div>
+
+   		</div>
+   	</div>
+   </div>
+
+
    <div class="row mt-5">
    	<h5 class="col text-center ">
    		Made By Ravi Kant Kumar
@@ -305,6 +331,24 @@ function getW() {
 					} else {
 						alert("not found");
 					}
+					var aqi = parseInt(data.data.aqi);
+				if (aqi > 0 && aqi < 50) {
+					document.querySelector(".aqi").style.backgroundColor = "#9afeaf";
+				} else if (aqi > 50 && aqi < 100) {
+					document.querySelector(".aqi").style.backgroundColor = "#ffff85";
+				} else if (aqi > 100 && aqi < 150) {
+					document.querySelector(".aqi").style.backgroundColor = "#ff9933";
+				} else if (aqi > 150 && aqi < 200) {
+					document.querySelector(".aqi").style.backgroundColor = "#CC0033";
+
+					document.querySelector(".aqi").style.color = "#fff";
+				} else if (aqi > 200 && aqi < 300) {
+					document.querySelector(".aqi").style.backgroundColor = "#660099";
+					document.querySelector(".aqi").style.color = "#fff";
+				} else {
+					document.querySelector(".aqi").style.backgroundColor = "#7E0023";
+					document.querySelector(".aqi").style.color = "#fff";
+				}
 				});
 
 
