@@ -14,7 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="f_cast.js"></script>
-	<script src="f_cast_rev.js"></script>
+	
 
     <script type="text/javascript">
     	$(window).on('load',function() {
@@ -116,12 +116,14 @@
 <script type="text/javascript">
 var city = "";
 
-const proxyurl="https://cors-anywhere.herokuapp.com/";
-fetch(proxyurl+"https://ipwhois.app/json/")
-	.then(res => res.json())
-	.then(function(data) {
 
-
+fetch("https://ipwhois.app/json/")
+	      .then(function(res)
+               {
+                return (res.json());
+               }
+                )
+.then(function(data){
 		console.log(data);
 
 		city = data.city;
@@ -129,8 +131,8 @@ fetch(proxyurl+"https://ipwhois.app/json/")
 		var lng = data.longitude;
 		console.log(city);
 
-		const proxyurl = "https://cors-anywhere.herokuapp.com/";
-		fetch(proxyurl + "http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q=" + city + "")
+		const proxyurl ="https://cors-anywhere.herokuapp.com/";
+		fetch(proxyurl+"http://api.weatherapi.com/v1/current.json?key=bf3e1839374e457090563134202211&q=" + city + "")
 			.then(res => res.json())
 			.then(function(data) {
 				

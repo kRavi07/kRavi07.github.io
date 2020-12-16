@@ -1,4 +1,4 @@
-const proxyurl = "https://cors-anywhere.herokuapp.com";
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
 fetch("http://ipwhois.app/json/" )
 .then(res=>res.json())
 .then(function(data){
