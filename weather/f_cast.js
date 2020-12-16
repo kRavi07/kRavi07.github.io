@@ -23,7 +23,7 @@ fetch("http://ipwhois.app/json/",{
 
 		console.log(data.daily[1].weather[0].icon);
 		temp="";
-		for(var i=1;i<5;i++)
+		for(var i=1;i<6;i++)
 		{
 			if(data.daily[i].weather[0].description=="clear sky")
 		{
