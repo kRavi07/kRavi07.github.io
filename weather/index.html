@@ -142,7 +142,7 @@
 </div>
 
 <script type="text/javascript">
-	
+
 	const my_weather_api=config.weather_api;
 	const my_waqi_api=config.waqi_api;
 	const my_pos_api=config.pos_api;
@@ -261,7 +261,7 @@ function getW() {
 	//Forcast for searched cities
 
 
-	fetch(proxyurl+"http://api.positionstack.com/v1/forward?access_key="+my_pos_api+"&query=" + txt)
+	fetch(proxyurl+"http://api.positionstack.com/v1/forward?access_key="+my_pos_api+"&query="+txt)
 		.then(res => res.json())
 		.then(function(data) {
 			console.log(data);
@@ -359,7 +359,7 @@ function getW() {
 
 
 
-			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid="+open_w_api+"")
+			fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&exclude=hourly,minutely&appid="+my_open_w_api+"")
 				.then(res => res.json())
 				.then(function(data) {
 					//console.log(data);

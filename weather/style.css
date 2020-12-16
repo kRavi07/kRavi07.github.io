@@ -60,10 +60,12 @@ border-radius: 10px;
             width: 100%;
             
          }
-         .scale>.col-6
+         .scale
          {
             max-width: 100%;
             flex: 0 0 100%;
          }
 
       }
+
+      
