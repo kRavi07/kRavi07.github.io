@@ -1,6 +1,7 @@
       body
    	{
       background-color: #d1f1fd;
+      opacity: 0 0 0 .5;
    	}
    	#temp_c,#temp_f
    	{

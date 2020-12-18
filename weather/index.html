@@ -136,7 +136,7 @@
 
    <div class="row mt-5">
    	<h5 class="col text-center ">
-   		Made By Ravi Kant Kumar
+   		Made with <img src="133.gif"> By Ravi Kant Kumar
    	</h5>
    </div>
 </div>
@@ -239,14 +239,19 @@ function getW() {
 			//document.writeln(data.location);
 			//console.log(data.current.condition);
 			//console.log(data.current);
-			document.getElementById("city_name").innerHTML = txt;
+			console.log(data);
+			if(typeof(data.location.name)==='undefined')
+			{
+				alert("No Data Found");
+			}
+			document.getElementById("city_name").innerHTML = data.location.name;
 
 			document.getElementById("last_up").innerHTML = "Last Updted On &nbsp" + data.current.last_updated;
 			document.getElementById("temp_c").innerHTML = data.current.temp_c + " &degC ";
 
 			document.getElementById("cond").innerHTML = data.current.condition.text;
-			document.getElementById("fls").innerHTML = data.current.feelslike_c + "&degC";
-			document.getElementById("hum").innerHTML = data.current.humidity + "%";
+			document.getElementById("fls").innerHTML = "Feels Like:"+data.current.feelslike_c + "&degC";
+			document.getElementById("hum").innerHTML = "Humidity:"+data.current.humidity + "%";
 			document.getElementById("icon").src = "https:" + data.current.condition.icon;
 			document.getElementById("w_speed").innerHTML = "Wind Speed : " + data.current.wind_kph + "kmph";
 			document.getElementById("w_dir").innerHTML = "Wind Direction : " + data.current.wind_dir
@@ -340,10 +345,13 @@ function getW() {
 					var aqi = parseInt(data.data.aqi);
 				if (aqi > 0 && aqi < 50) {
 					document.querySelector(".aqi").style.backgroundColor = "#9afeaf";
+					document.querySelector(".aqi").style.color="#23272B";
 				} else if (aqi > 50 && aqi < 100) {
 					document.querySelector(".aqi").style.backgroundColor = "#ffff85";
+					document.querySelector(".aqi").style.color="#23272B";
 				} else if (aqi > 100 && aqi < 150) {
 					document.querySelector(".aqi").style.backgroundColor = "#ff9933";
+					document.querySelector(".aqi").style.color="#23272B";
 				} else if (aqi > 150 && aqi < 200) {
 					document.querySelector(".aqi").style.backgroundColor = "#CC0033";
 
@@ -351,7 +359,7 @@ function getW() {
 				} else if (aqi > 200 && aqi < 300) {
 					document.querySelector(".aqi").style.backgroundColor = "#660099";
 					document.querySelector(".aqi").style.color = "#fff";
-				} else {
+				} else if(aqi>300){
 					document.querySelector(".aqi").style.backgroundColor = "#7E0023";
 					document.querySelector(".aqi").style.color = "#fff";
 				}
