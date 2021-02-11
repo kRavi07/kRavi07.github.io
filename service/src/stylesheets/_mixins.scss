@@ -1,0 +1,12 @@
+// Query screen sizes greater than $size
+@mixin above($size, $orientation: false) {
+  @if ($orientation == 'vertical') {
+    @media screen and (min-height: $size){
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $size){
+      @content;
+    }
+  }
+}

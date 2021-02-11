@@ -1,0 +1,39 @@
+body
+{
+	background-color: #bbb;
+	
+    
+}
+
+.login_box_detail
+{
+	background:linear-gradient( rgba( 126, 211, 33, 0.45 ),
+		rgba( 126, 211, 33, 0.45 )),
+	url('') center,center;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.0px );
+-webkit-backdrop-filter: blur( 4.0px );
+border-radius: 10px;
+background-size: cover;
+
+background-repeat: no-repeat;
+color:#fff;
+}
+
+@media only screen and (max-width:576px)
+{
+ .list img
+ {
+    height: fit-content;
+ }
+}
+
+
+
+
+
+
+
+
+
+

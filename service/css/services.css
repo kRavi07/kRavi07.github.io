@@ -1,0 +1,37 @@
+.card
+{
+	background-color:#fff;
+}
+
+.card::after
+{
+     position: absolute;
+    top: -3px;
+    right: -3px;
+    margin: 0 auto;
+    content: "";
+    display: block;
+    background: #fff;
+    border-radius: 3px 0 0 0;
+    transform: rotate(0deg);
+    border-top: 40px solid #fff;
+    border-left: 40px solid #EAEDF2;
+}
+
+@media only screen and (min-width:576px)
+{
+  .card-deck .card
+	{
+		flex:1 0 30% !important;
+	}	
+} 
+
+
+@media only screen and (min-width:990px) 
+{ 
+	.card-deck .card
+	{
+		flex:1 0 0% !important;
+	}
+	
+}
