@@ -1,0 +1,51 @@
+body{
+
+	background-image: url(image/login.jpg);
+	background-attachment: fixed;
+	background-size:cover;
+}
+.form-container{
+	opacity: 0.7;
+	background: #000000;
+	padding:30px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 100px #200;
+}
+label{
+	  font-weight: bold;
+  color: DarkGreen;
+}
+span{
+	font-weight: italic;
+	color: grey;
+}
+input[type=text] {
+  border: 2px red;
+  border-radius: 4px;
+}
+input[type=password] {
+  border: 2px red;
+  border-radius: 4px;
+}
+   
+input[type=email] {
+  border: 2px solid green;
+  border-radius: 4px;
+}
+   input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Lucida Fax;
+}
+.box{
+
+	  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+	
