@@ -8,7 +8,7 @@ console.log(fda);
               
 
               const proxyurl = "https://cors-anywhere.herokuapp.com/";
-			fetch(proxyurl+'https://thevirustracker.com/free-api?global=stats')
+			fetch('https://api.covid19api.com/summary')
 			.then(function(res)
                {
                	return (res.json());
@@ -18,14 +18,15 @@ console.log(fda);
 			{     
                 //var last=data.cases_time_series.length;
                 //var last_data=data.tested.length;
-                console.log(data.results[0]);
-             
+                console.log(data.Global);
+            
 			
 
-         var totalconfirmed=data.results[0].total_cases;
-         var totalrecovered=data.results[0].total_recovered;
-         var totalactive = data.results[0].total_active_cases;
-         var totaldeceased=data.results[0].total_deaths;
+         var totalconfirmed=data.Global.TotalConfirmed;
+         var totalrecovered=data.Global.TotalRecovered;
+         var totaldeceased=data.Global.TotalDeaths;
+         var totalactive = totalconfirmed-(totalrecovered+totaldeceased);
+         
          //var sample_tested=data.tested[last_data-1].totalindividualstested;
          //var daily_test= data.tested[last_data-1].samplereportedtoday;
          
@@ -36,10 +37,10 @@ console.log(fda);
         document.getElementById("act_case").innerHTML=totalactive.toLocaleString();
         //document.getElementById("sample_tested").innerHTML=sample_tested;
 
-        document.getElementById("daily_cnf_case").innerHTML=data.results[0].total_unresolved.toLocaleString();
-        document.getElementById("daily_rec_case").innerHTML=data.results[0].total_serious_cases.toLocaleString();
-        document.getElementById("daily_death_case").innerHTML=data.results[0].total_new_deaths_today.toLocaleString();
-        document.getElementById("daily_act_case").innerHTML=data.results[0].total_new_cases_today.toLocaleString();
+        document.getElementById("daily_cnf_case").innerHTML=data.Global.NewConfirmed.toLocaleString();
+        document.getElementById("daily_rec_case").innerHTML=data.Global.NewRecovered.toLocaleString();
+        document.getElementById("daily_death_case").innerHTML=data.Global.NewDeaths.toLocaleString();
+        document.getElementById("daily_act_case").innerHTML=data.Global.total_new_cases_today.toLocaleString();
         
 
 			});
@@ -50,7 +51,7 @@ console.log(fda);
 
         
          const proxyurl = "https://cors-anywhere.herokuapp.com/";
-            fetch(proxyurl+'https://api.covid19api.com/summary')
+            fetch('https://api.covid19api.com/summary')
             .then(function(res)
                {
                 return (res.json());
