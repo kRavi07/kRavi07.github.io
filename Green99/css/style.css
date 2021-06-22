@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	background:#fff;
+}
+
+nav ul li a{
+	color:#2a2a2a;
+	font-size: 1.1em;
+	color:#fff;
+	font-family: 'Nunito', sans-serif;
+	cursor: pointer;
+}
+nav{
+	background:#2699fb;
+}
+
+.fa-instagram{
+	color: #dc3545;
+}
+.navbar-brand img{
+	max-width: 6em;
+	max-height: 10em;
+}
+.banner img
+{
+	width: 100%;
+}
+
+.item a{
+	font-size: 1.3em;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.cloth-item img, .shoes-item img,.row-item img, .kitchen-item img,.households-item img{
+max-width: 80%;
+}
+.sale-banner img{
+	max-width: 90%;
+	margin-left: 5%;
+}
+hr{
+	border:1px solid #000 ;
+}
+
+.row-item{
+	
+}
+
+.item-icon {
+	max-width: 2em;
+	display: none;
+
+}
+
+.item:hover .item-icon{
+	display:initial;
+
+}
+.item:hover a{
+	padding: 1em;
+	border-radius: 10px;
+	-webkit-box-shadow: 6px 6px 18px 0px rgba(0, 0, 103, 1);
+-moz-box-shadow:    6px 6px 18px 0px rgba(0, 0, 103, 1);
+box-shadow:         6px 6px 18px 0px rgba(0, 0, 103, 1);
+
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.fet-icons{
+	max-width: 2em;
+	
+	
+	border:5px;
+}
+footer{
+background:#2699fb;	
+}
+.footer-title img{
+	max-width: 10em;
+	max-height: 10em;
+
+}
+.social-icons
+{
+    margin-left: -2rem;
+}
+.social-icons li
+{
+    display: inline-block;
+    
+
+}
+.social-icons ul li a:hover
+{
+    color:yellow;
+}
+.links
+{
+    margin-left: -2.5rem;
+}
+.links li
+{
+ list-style: none;
+ margin-top: 1.1em;
+ }
+.links li a
+{
+text-decoration: none;
+font-size: 1.2rem;
+}
+li a:hover
+{
+text-decoration: none;
+color:#fff;
+}
+
+
+@media screen and (max-width: 576px){
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.navbar-nav{
+		margin-left: 0 !important;
+	}
+	.sale-banner img{
+		padding-left: 0;
+	}
+	.cloth-item img,.shoes-item img,.kitchen-item img,.households-item img{
+		margin-top: 10%;
+	}
+	.row-item{
+		margin-left: 10%;
+		margin-top: 10%;
+	}
+	.row-item img{
+		max-width: 100%;
+	}
+	.item{
+		display: none;
+	}
+     footer .links{
+     	margin-left: 0;
+     }
+     .footer-text{
+     	margin-left: 6%;
+     }
+     .footer-title img{
+     	margin-left: -8%;
+     }
+     .feature{
+     	margin-top: 10%;
+
+     }
+     .feature-icon{
+     	display: none;
+     }
+     .nav-item{
+            
+            text-align: center;
+            padding: 0 !important;
+     }
+}
