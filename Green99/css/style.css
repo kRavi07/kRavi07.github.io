@@ -11,19 +11,24 @@ nav ul li a{
 	color:#2a2a2a;
 	font-size: 1.1em;
 	color:#fff;
+	font-weight: bold;
 	font-family: 'Nunito', sans-serif;
 	cursor: pointer;
 }
 nav{
 	background:#2699fb;
+	padding-bottom: 0;
 }
 
 .fa-instagram{
 	color: #dc3545;
 }
 .navbar-brand img{
-	max-width: 6em;
-	max-height: 10em;
+	max-width: 5rem;
+	padding: 0;
+	margin: 0;
+	transform: scale(2);
+	
 }
 .banner img
 {
@@ -123,6 +128,11 @@ color:#fff;
 }
 
 
+ .stretch-card>.card {
+     width: 100%;
+     min-width: 100%
+ }
+
 @media screen and (max-width: 576px){
 	*{
 		padding: 0;
@@ -137,6 +147,15 @@ color:#fff;
 	.cloth-item img,.shoes-item img,.kitchen-item img,.households-item img{
 		margin-top: 10%;
 	}
+	.item{
+		padding: 0;
+	}
+	.item a{
+	font-size: .9em;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
 	.row-item{
 		margin-left: 10%;
 		margin-top: 10%;
@@ -144,9 +163,8 @@ color:#fff;
 	.row-item img{
 		max-width: 100%;
 	}
-	.item{
-		display: none;
-	}
+
+	
      footer .links{
      	margin-left: 0;
      }
@@ -168,4 +186,14 @@ color:#fff;
             text-align: center;
             padding: 0 !important;
      }
+}
+
+
+@media screen and (max-width: 380px){
+		.item a{
+	font-size: .6em;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
 }
