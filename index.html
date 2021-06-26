@@ -3,7 +3,7 @@
 
 <head>
     <meta charset=UTF-8 />
-    
+    <link rel="icon" href="img/ico.png" type="image/png" sizes="16x16">
     <meta name=author content="Ravi kant Kumar">
     <meta name=viewport content="width=device-width,initial-scale=1" />
     <meta http-equiv=X-UA-Compatible content="ie=edge" />
@@ -13,11 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;700&display=swap" rel=stylesheet>
     <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <script src=https://kit.fontawesome.com/3c09bcb51a.js></script>
-    <title>Comming Soon</title>
+    <title>Ravi Kant Kumar</title>
     <link href="styles/main.css" rel="stylesheet">
+    <style type="text/css">
+            .no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(img/loader.gif) center no-repeat #fff;
+}
+    </style>
 </head>
 
 <body>
+    <div class="se-pre-con"></div>
     <div class=container>
         <div class=row>
             <div class="left-wrap col-12 col-md-5">
@@ -50,6 +64,13 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(window).load(function() {
+    
+        $(".se-pre-con").fadeOut("slow");;
+    });
+</script>
+  
     <script type="text/javascript" src="scripts/bundle.js"></script>
  
 </body>
